@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../styles/../assets/fonts/Nunitoregular.woff");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../styles/../assets/fonts/Nunitobold.woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../styles/../assets/fonts/Nunitoextrabold.woff");
+    font-weight: 800;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    background: #EDEEF3;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #F7F7F7;
+    flex-shrink: 0;
+    position: relative;
+    border-right: 1px solid #E2E2E2;
+}
+
+.logo {
+    text-align: center;
+    display: block;
+    padding: 25px 81px 14px 81px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navigation ul li span {
+    margin-left: 5px;
+}
+
+.navigation {
+    margin-top: 15px;
+}
+
+.navigation-item {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    margin: 0 13px;
+    padding: 13px 15px;
+    cursor: pointer;
+    gap: 10px;
+    transition: .2s;
+}
+
+.navigation-item:hover,
+.navigation-item:hover svg path {
+    background: #467DF2;
+    border-radius: 5px;
+    color: white;
+    fill: white;
+}
+
+.navigation-item{
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+}
+
+.sidebar-info {
+    padding: 13px 12px;
+    margin: 17px;
+    position: absolute;
+    border: 1px solid transparent;
+    bottom: 0;
+    right: 0;
+}
+
+.sidebar-info:hover {
+    border: 1px solid #467DF2;
+    border-radius: 5px;
+}
+
+.sidebar-info p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+}
+
+.special {
+    color: #0042EB;
+    text-decoration: none;
+}
+
+.sidebar-info svg {
+    float: left;
+    margin-right: 6px;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+.header {
+    background: #F7F7F7;
+    padding: 24px 40px 24px 41px;
+    border-bottom: 1px solid #E2E2E2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-icon {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.menu-hover {
+    margin: 0 40px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+    text-decoration: none;
+}
+
+.menu-hover:hover {
+    color: #3D63D2;
+}
+
+.menu-hover-tasks {
+    margin-left: 15px;
+}
+
+.hover-svg svg {
+    margin-left: 5px;
+}
+
+.hover-svg:hover {
+    stroke: #3D63D2;
+}
+
+.header-search {
+    position: absolute;
+    right: 41px;
+    top: 15px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.search-box .icon-search {
+    position: absolute;
+    left: 20px;
+}
+.button-header {
+    background: #467DF2;
+    color: #fff;
+    padding: 11px 18px 10px 18px;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-header:hover {
+    background: #2F54A3;
+}
+
+.header-icon svg {
+    margin-left: 40px;
+}
+
+.header-icon:hover svg path {
+    fill: #467DF2;
+}
+
+.header-search-input {
+    margin-left: 40px;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    color: #B3B3B3;
+    font-size: 14px;
+    line-height: 19px;
+    width: 373px;
+    padding: 12px 0 14px 20px;
+    background: url("../assets/images/search.png") #EFEFF5 no-repeat;
+    background-position: 20px center;
+    display: flex;
+    outline: none;
+}
+
+.header-search-input::placeholder {
+    padding-left: 25px;
+    color: #B3B3B3;
+    align-items: center;
+}
+.header-tasks {
+    background: white;
+    box-shadow: 0 4px 20px 0 rgba(102, 102, 102, 0.15);
+    padding: 30px 30px 15px 20px;
+    border-radius: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 55px;
+    left: 485px;
+}
+
+.header-tasks-item {
+    font-size: 14px;
+    line-height: 19px;
+    color: #686464;
+    margin-bottom: 15px;
+}
+
+.menu-hover-tasks:hover .header-tasks {
+    display: block;
+}
+
+.header-tasks {
+    display: none;
+}
+
+.container {
+    padding: 36px 0 93px 40px;
+}
+
+.main-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.block {
+    background: #FFF;
+    border-radius: 10px;
+    max-width: 350px;
+    position: relative;
+}
+
+.block:hover {
+    box-shadow: 0 4px 20px 0 rgba(102, 102, 102, 0.15);
+}
+
+h1 {
+    font-size: 35px;
+    line-height: 48px;
+    color: #4F4E4F;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 25px;
+    color: #4F4E4F;
+    font-weight: 800;
+    margin: 20px 27px 8px 27px;
+}
+
+.block span {
+    font-size: 15px;
+    line-height: 30px;
+    color: #4F4E4F;
+    margin-left: 27px;
+}
+
+.block-icons {
+    margin: 16px 0 20px 4px;
+    display: flex;
+    align-items: center;
+}
+
+.block-icons a {
+    margin: 0 22px;
+    text-decoration: none;
+}
+
+.block-icons a:hover svg path{
+    fill: #467DF2;
+}
+
+.block-icons a:hover svg ellipse{
+    fill: #467DF2;
+}
+
+.block-icons a:last-child {
+    margin-right: 0;
+}
+
+.special-block {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    border-radius: 5px;
+    padding: 4px 12px;
+}
+
+.special-text {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.special-block.special-block-white {
+    background-color: rgba(247, 247, 247, 0.8);
+}
+
+.special-text.special-text-white {
+    color: #4F4E4F;
+}
+
+.special-block.special-block-green {
+    background-color: #C6E0C3;
+}
+
+.special-text.special-text-green {
+    color: #027900;
+}
+
+.special-block.special-block-red {
+    background-color: rgba(255, 188, 188, 0.8);
+}
+
+.special-text.special-text-red {
+    color: #DB0C0C;
+}
+
+.vertical-button {
+    padding: 10px 20px;
+    background: #467DF2;
+    color: #fff;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transform: rotate(-90deg);
+    top: 327px;
+    right: 0;
+    transform-origin: 100% 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    transition: .3s;
+}
+
+.vertical-button:hover {
+    background: #2F54A3;
+    padding-bottom: 25px;
+    top: 310px;
+}
+
+.vertical-button img {
+    transform: rotate(90deg);
+    margin-right: 10px;
+}
+
+
+
